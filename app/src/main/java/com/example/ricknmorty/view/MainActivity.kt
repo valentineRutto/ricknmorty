@@ -47,10 +47,8 @@ class MainActivity : AppCompatActivity() {
 //
 //        })
 
-
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            Snackbar.make(view, "Feature Under Development", Snackbar.LENGTH_LONG).show()
         }
     }
 
@@ -69,4 +67,5 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
 }

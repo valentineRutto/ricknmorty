@@ -1,4 +1,4 @@
-package com.example.ricknmorty.data.di.module
+package com.example.ricknmorty.di.module
 
 import com.example.ricknmorty.BuildConfig
 import com.example.ricknmorty.data.api.ApiHelper
