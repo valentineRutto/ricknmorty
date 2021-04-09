@@ -4,14 +4,20 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.example.ricknmorty.R
 import com.example.ricknmorty.databinding.ActivityMainBinding
 import com.example.ricknmorty.view.adapter.CharacterAdapter
+import com.example.ricknmorty.viewmodel.CharactersViewModel
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.coroutines.launch
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
     lateinit var characterAdapter: CharacterAdapter
     lateinit var binding: ActivityMainBinding
+
+    private val characterViewmodel by viewModel<CharactersViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +28,24 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         characterAdapter = CharacterAdapter()
         binding.rvCharacters.adapter = characterAdapter
+
+        lifecycleScope.launch {
+            val list = characterViewmodel.rickMortyCharactersList()
+            characterAdapter.submitList(list)
+        }
+
+//        characterViewmodel.getCharacters().observe(this, Observer {
+//
+//            when (it.status) {
+//                Status.ERROR -> TODO()
+//                Status.LOADING -> TODO()
+//                Status.SUCCESS -> {
+//                    characterAdapter.submitList(it.data)
+//                }
+//
+//            }
+//
+//        })
 
 
         binding.fab.setOnClickListener { view ->

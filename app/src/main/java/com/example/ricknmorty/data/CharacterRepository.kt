@@ -2,15 +2,13 @@ package com.example.ricknmorty.data
 
 import com.example.ricknmorty.data.api.ApiHelper
 import com.example.ricknmorty.data.model.CharacterUiData
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 
 class CharacterRepository(private val apiHelper: ApiHelper) {
+//    = withContext(Dispatchers.IO)
 
-    suspend fun getCharacters(): List<CharacterUiData>? = withContext(Dispatchers.IO) {
+    suspend fun getCharacters(): List<CharacterUiData>? {
 
-
-        apiHelper.getCharacters().body()?.results?.map { character ->
+        return apiHelper.getCharacters().body()?.results?.map { character ->
             CharacterUiData(
                 character?.id.toString(),
                 character?.name,
@@ -22,6 +20,7 @@ class CharacterRepository(private val apiHelper: ApiHelper) {
             )
 
         }
-    }
 
+
+    }
 }
