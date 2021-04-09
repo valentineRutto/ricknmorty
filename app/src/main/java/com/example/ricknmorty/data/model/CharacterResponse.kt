@@ -1,4 +1,4 @@
-package com.example.ricknmorty.data
+package com.example.ricknmorty.data.model
 
 
 import com.google.gson.annotations.SerializedName
