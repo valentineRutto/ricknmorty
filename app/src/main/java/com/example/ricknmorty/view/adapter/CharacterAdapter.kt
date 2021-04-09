@@ -34,7 +34,7 @@ class CharacterAdapter :
 //                transformations(CircleCropTransformation())
             }
 
-            binding.txtEpisodesCount.text = "Episode Count: " + item.episodeCount
+            binding.txtEpisodesCount.text = "Episode Appearances: " + item.episodeCount
             binding.txtName.text = item.name
             binding.txtOrigin.text = item.origin
             binding.txtSpecies.text = item.species
