@@ -28,8 +28,7 @@ class CharacterAdapter :
 
         fun bind(item: CharacterUiData) {
 
-            binding.image.load("https://rickandmortyapi.com/api/character/avatar/1.jpeg") {
-//            binding.image.load("${item.imageUrl}"){
+            binding.image.load("${item.imageUrl}") {
                 crossfade(true)
                 placeholder(R.drawable.ic_launcher_background)
                 transformations(CircleCropTransformation())
