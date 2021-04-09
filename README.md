@@ -18,5 +18,11 @@ This application consumes [Rick&Morty Api characters](https://rickandmortyapi.co
 -Lifecycle - perform action when lifecycle state changes.<br/>
 -ViewModel - store and manage UI-related data in a lifecycle conscious way.<br/>
 
+# ScreenShots 
+
+![List of Characters](Screenshot_20210410_021824.png)
+
+
+
 
 
