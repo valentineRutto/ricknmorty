@@ -1,15 +1,16 @@
 package com.example.ricknmorty.data
 
+import com.example.ricknmorty.data.api.ApiHelper
 import com.example.ricknmorty.data.model.CharacterUiData
-import com.example.ricknmorty.network.ApiService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class CharacterRepository(private val apiService: ApiService) {
+class CharacterRepository(private val apiHelper: ApiHelper) {
 
     suspend fun getCharacters(): List<CharacterUiData>? = withContext(Dispatchers.IO) {
 
-        apiService.getAllCharacters().results?.map { character ->
+
+        apiHelper.getCharacters().body()?.results?.map { character ->
             CharacterUiData(
                 character?.id.toString(),
                 character?.name,

@@ -1,8 +1,8 @@
 package com.example.ricknmorty.data.api
 
-import com.example.ricknmorty.network.ApiService
+import com.example.ricknmorty.data.model.CharacterResponse
+import retrofit2.Response
 
-class ApiHelper(private val apiService: ApiService) {
-
-    suspend fun getCharacters() = apiService.getAllCharacters()
+interface ApiHelper {
+    suspend fun getCharacters(): Response<CharacterResponse>
 }
