@@ -20,7 +20,7 @@ This application consumes [Rick&Morty Api characters](https://rickandmortyapi.co
 
 # ScreenShots 
 
-![List of Characters](Screenshot_20210410_021824.png)
+![List of Characters](https://user-images.githubusercontent.com/10762793/114249832-67cb6000-99a4-11eb-84b5-6326dbe62acc.png)
 
 
 
