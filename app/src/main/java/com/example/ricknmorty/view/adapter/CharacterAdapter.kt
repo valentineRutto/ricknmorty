@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.example.ricknmorty.R
-import com.example.ricknmorty.data.model.CharacterUiData
+import com.example.ricknmorty.model.data.CharacterUiData
 import com.example.ricknmorty.databinding.RowCharacterBinding
 
 class CharacterAdapter :
@@ -41,18 +41,6 @@ class CharacterAdapter :
             binding.txtStatus.text = item.status
 
 
-//val photocolor = ViewUtils.createPaletteSync()
-//
-//            Palette.from(photo).generate { palette ->
-//                val bgColor = palette?.getMutedColor(
-//                    ContextCompat.getColor(binding.root.context,
-//                        android.R.color.black))
-//                if (bgColor != null) {
-//                    binding.detailsLayout.setBackgroundColor(bgColor)
-//                }
-//            }
-
-
         }
 
         companion object {
@@ -61,17 +49,7 @@ class CharacterAdapter :
                 val binding = RowCharacterBinding.inflate(layoutInflater, parent, false)
                 return ViewHolder(binding)
             }
-//
-//            val loader = ImageLoader(this)
-//            val req = LoadRequest.Builder(this)
-//                .data("https://images.dog.ceo/breeds/saluki/n02091831_3400.jpg") // demo link
-//                .target { result ->
-//                    val bitmap = (result as BitmapDrawable).bitmap
-//                }
-//                .build()
-//
-//            val disposable = loader.execute(req)
-        }
+}
     }
 }
 

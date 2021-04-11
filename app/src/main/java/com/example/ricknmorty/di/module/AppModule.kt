@@ -1,9 +1,9 @@
 package com.example.ricknmorty.di.module
 
 import com.example.ricknmorty.BuildConfig
-import com.example.ricknmorty.data.api.ApiHelper
-import com.example.ricknmorty.data.api.ApiHelperImpl
-import com.example.ricknmorty.data.api.ApiService
+import com.example.ricknmorty.model.api.ApiHelper
+import com.example.ricknmorty.model.api.ApiHelperImpl
+import com.example.ricknmorty.model.api.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
@@ -39,7 +39,7 @@ private fun provideRetrofit(
     Retrofit.Builder()
         .addConverterFactory(GsonConverterFactory.create())
         .baseUrl(BASE_URL)
-        .client(okHttpClient)
+            .client(okHttpClient)
         .build()
 
 private fun provideApiService(retrofit: Retrofit): ApiService =

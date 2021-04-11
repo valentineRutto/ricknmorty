@@ -1,6 +1,6 @@
-package com.example.ricknmorty.data.api
+package com.example.ricknmorty.model.api
 
-import com.example.ricknmorty.data.model.CharacterResponse
+import com.example.ricknmorty.model.data.CharacterResponse
 import retrofit2.Response
 
 interface ApiHelper {

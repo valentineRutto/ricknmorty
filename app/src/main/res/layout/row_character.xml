@@ -51,7 +51,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-
                     android:id="@+id/txtSpecies"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -67,8 +66,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:text="Earth"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtName" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSpecies" />
 
                 <TextView
                     android:id="@+id/txtEpisodesCount"
@@ -76,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtSpecies" />
+                    app:layout_constraintTop_toBottomOf="@+id/txtOrigin" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.ricknmorty.data.model
+package com.example.ricknmorty.model.data
 
 data class CharacterUiData(
     val id: String?,
