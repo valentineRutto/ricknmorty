@@ -2,6 +2,7 @@ package com.example.ricknmorty.view
 
 import android.content.Context
 import android.graphics.Bitmap
+import android.graphics.Color
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -38,7 +39,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
+       setSupportActionBar(binding.toolbar)
+        binding.toolbar.setBackgroundColor(Color.TRANSPARENT)
         characterAdapter = CharacterAdapter()
         binding.rvCharacters.adapter = characterAdapter
 
@@ -68,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                         val result: Deferred<Bitmap?> = GlobalScope.async {
                             url.toBitmap()
                         }
-                        val vibrantSwatch = result.await()?.let { ViewUtils.createPaletteSync(it).vibrantSwatch?.rgb }
+                        val vibrantSwatch = result.await()?.let { ViewUtils.createPaletteSync(it).lightVibrantSwatch?.rgb }
                         if (vibrantSwatch != null) {
                             color = vibrantSwatch
                         }
