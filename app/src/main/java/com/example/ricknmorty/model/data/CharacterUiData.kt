@@ -7,5 +7,6 @@ data class CharacterUiData(
     val species: String?,
     val imageUrl: String?,
     val episodeCount: String?,
-    val origin: String?
+    val origin: String?,
+    val color: Int? = null
 )

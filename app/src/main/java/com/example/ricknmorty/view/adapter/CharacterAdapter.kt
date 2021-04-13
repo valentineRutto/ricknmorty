@@ -7,11 +7,12 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.example.ricknmorty.R
-import com.example.ricknmorty.model.data.CharacterUiData
 import com.example.ricknmorty.databinding.RowCharacterBinding
+import com.example.ricknmorty.model.data.CharacterUiData
+
 
 class CharacterAdapter :
-    ListAdapter<CharacterUiData, CharacterAdapter.ViewHolder>(CharacterDiffCallback()) {
+        ListAdapter<CharacterUiData, CharacterAdapter.ViewHolder>(CharacterDiffCallback()) {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
@@ -28,6 +29,7 @@ class CharacterAdapter :
 
         fun bind(item: CharacterUiData) {
 
+
             binding.image.load("${item.imageUrl}") {
                 crossfade(true)
                 placeholder(R.drawable.ic_launcher_background)
@@ -39,8 +41,9 @@ class CharacterAdapter :
             binding.txtOrigin.text = item.origin
             binding.txtSpecies.text = item.species
             binding.txtStatus.text = item.status
-
-
+            binding.txtStatus.setBackgroundColor(item.color
+                    ?: R.color.design_default_color_secondary)
+            binding.txtName.setTextColor(item.color ?: R.color.design_default_color_secondary)
         }
 
         companion object {

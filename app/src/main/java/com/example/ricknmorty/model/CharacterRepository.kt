@@ -4,11 +4,8 @@ import com.example.ricknmorty.model.api.ApiHelper
 import com.example.ricknmorty.model.data.CharacterResponse
 import com.example.ricknmorty.model.data.CharacterUiData
 import com.example.ricknmorty.utils.NetworkResult
-import com.example.ricknmorty.utils.Resource
 import com.example.ricknmorty.utils.safeApiCall
-import com.google.gson.JsonObject
 import kotlinx.coroutines.Dispatchers
-import retrofit2.Response
 
 class CharacterRepository(private val apiHelper: ApiHelper) {
 
@@ -21,7 +18,7 @@ class CharacterRepository(private val apiHelper: ApiHelper) {
                 character?.species,
                 character?.image,
                 character?.episode?.size.toString(),
-                character?.origin?.name
+                character?.origin?.name,
             )
         }
     }
