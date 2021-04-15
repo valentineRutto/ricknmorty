@@ -21,7 +21,11 @@ This application consumes [Rick&Morty Api characters](https://rickandmortyapi.co
 -ViewModel - store and manage UI-related data in a lifecycle conscious way.<br/>
 
 # ScreenShots 
-<img src="https://user-images.githubusercontent.com/10762793/114249832-67cb6000-99a4-11eb-84b5-6326dbe62acc.png" width="300">&emsp;
+<img src="Screenshot_20210413_165547.png![image](https://user-images.githubusercontent.com/10762793/114827096-f0953200-9dd0-11eb-9a94-306d62df805f.png)
+" width="300">&emsp;
+<img src="Screenshot_20210413_162916.png![image](https://user-images.githubusercontent.com/10762793/114827181-099de300-9dd1-11eb-9e2e-aca7c97af1d8.png)
+)
+" width="300">&emsp;
 
 
 
