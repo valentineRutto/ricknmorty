@@ -19,6 +19,7 @@
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
+            android:id="@+id/appbar"
             android:layout_height="wrap_content"
             android:theme="@style/Theme.RicknMorty.AppBarOverlay">
 
@@ -31,8 +32,11 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <!--    <include layout="@layout/content_main" />-->
-
+<!--            <include layout="@layout/content_main" />-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvCharacters"
@@ -41,6 +45,7 @@
             app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
             tools:itemCount="20"
             tools:listitem="@tools:sample/backgrounds/scenic" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
