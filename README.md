@@ -5,6 +5,8 @@ Demo application built in 100% Kotlin following MVVM design architecture and imp
 
 This app was developed for [IWD2021-WTM-NAIROBI EVENT](https://gdg.community.dev/events/details/google-gdg-nairobi-presents-international-womens-day-2021-nairobi/).<br/><br/>
 
+Link to the session slides [Exposing network status in MVVM](https://speakerdeck.com/valentinerutto/exposing-network-result-status-in-mvvm)<br/><br/>
+
 This application consumes [Rick&Morty Api characters](https://rickandmortyapi.com/documentation/#character)<br/><br/>
 
 # Tech Stack<br/>
@@ -19,8 +21,7 @@ This application consumes [Rick&Morty Api characters](https://rickandmortyapi.co
 -ViewModel - store and manage UI-related data in a lifecycle conscious way.<br/>
 
 # ScreenShots 
-
-![List of Characters](https://user-images.githubusercontent.com/10762793/114249832-67cb6000-99a4-11eb-84b5-6326dbe62acc.png)
+<img src="https://user-images.githubusercontent.com/10762793/114249832-67cb6000-99a4-11eb-84b5-6326dbe62acc.png" width="300">&emsp;
 
 
 
